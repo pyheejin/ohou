@@ -20,6 +20,13 @@ class LowerCategory(models.Model):
     class Meta:
         db_table = 'lower_categories'
 
+class LowerSubCategory(models.Model):
+    lower_category = models.ForeignKey('LowerCategory', on_delete=models.SET_NULL, null=True)
+    name = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'lower_sub_categories'
+
 class Brand(models.Model):
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=50)
