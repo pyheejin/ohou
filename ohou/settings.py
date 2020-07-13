@@ -43,7 +43,9 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'corsheaders',
-
+    'account',
+    'product',
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +89,7 @@ WSGI_APPLICATION = 'ohou.wsgi.application'
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 #}
-DATABASE = config.DATABASES
+DATABASES = config.DATABASES
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
